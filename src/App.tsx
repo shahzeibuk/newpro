@@ -101,122 +101,121 @@ function App() {
     
     <div className="min-h-screen bg-gradient-to-br from-amber-200 to-amber-400">
       {/* Header with Logo and Talk Button */}
-      <header className="flex justify-between items-center p-8">
+      <header className="flex justify-between items-center p-4 md:p-8">
         <img 
           src="/upsa-logo-white.png"
           alt="Universidad Logo"
-          className="h-16"
+          className="h-10 md:h-16"
         />
-        <button className="bg-white rounded-full px-6 py-3 flex items-center gap-2 font-semibold text-black hover:bg-gray-50 transition-colors">
+        <button className="bg-white rounded-full px-4 py-2 md:px-6 md:py-3 flex items-center gap-1 md:gap-2 font-semibold text-black text-sm md:text-base hover:bg-gray-50 transition-colors">
           ¿HABLAMOS?
-          <ArrowRight className="w-5 h-5" />
+          <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
         </button>
       </header>
 
       {/* Hero Section */}
-      <section className="flex justify-between items-center max-w-7xl mx-auto px-8">
-        <div className="max-w-2xl">
-          <h1 className="text-6xl font-bold text-navy-900 mb-4">
+      <section className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-0">
+        <div className="max-w-2xl text-center md:text-left mb-8 md:mb-0">
+          <h1 className="text-4xl md:text-6xl font-bold text-navy-900 mb-4">
             Soy <span className="bg-white px-4 py-1 rounded-full">Clara</span>,
             <br />
-            <span className="text-5xl">Orientadora</span>
+            <span className="text-3xl md:text-5xl">Orientadora</span>
           </h1>
           
-          <p className="text-2xl mb-8 text-navy-800">
+          <p className="text-xl md:text-2xl mb-8 text-navy-800">
             de la Unidad de Empleabilidad<br />
             y Prácticas de la UPSA
           </p>
 
           <div className="space-y-4">
-            <button className="bg-white rounded-full px-8 py-4 font-semibold text-black hover:bg-gray-50 transition-colors">
+            <button className="bg-white rounded-full px-6 py-3 md:px-8 md:py-4 font-semibold text-black hover:bg-gray-50 transition-colors">
               AVANCEMOS JUNTOS
             </button>
-            <p className="text-xl text-navy-800 ml-2">
+            <p className="text-lg md:text-xl text-navy-800 ml-2">
               Camina al éxito profesional
             </p>
           </div>
         </div>
   
-
-        <div className="relative">
-        <div className="absolute top-3 left-0 w-full h-full -z-8">
-  <img 
-    src="/blob-haikei.png" 
-    alt="Background" 
-    className="w-full h-full object-cover rounded-3xl opacity-90"
-  />
-</div>
-          <div className="absolute -top-20 -right-20 w-96 h-96 bg-white rounded-bl-[100px] -z-10" />
+        <div className="relative w-full md:w-auto">
+          <div className="absolute top-3 left-0 w-full h-full -z-8">
+            <img 
+              src="/blob-haikei.png" 
+              alt="Background" 
+              className="w-full h-full object-cover rounded-3xl opacity-90"
+            />
+          </div>
+          <div className="absolute -top-10 -right-10 md:-top-20 md:-right-20 w-48 h-48 md:w-96 md:h-96 bg-white rounded-bl-[50px] md:rounded-bl-[100px] -z-10" />
           <img 
             src="/clara-profile.png"
             alt="Professional Woman"
-            className="relative z-10 w-[660px]"
+            className="relative z-10 w-full max-w-[350px] md:max-w-[660px] mx-auto"
           />
         </div>
       </section>
 
       {/* News Section */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex items-center justify-between gap-20">
-            <div className="relative w-[400px]">
+      <section className="bg-white py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20">
+            <div className="relative w-full max-w-[350px] md:w-[400px]">
               <img 
                 src="/mobile-mockup.png"
                 alt="Mobile App"
                 className="w-full"
               />
-              <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-3 px-8">
+              <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-3 px-6 md:px-8">
                 <div 
                   ref={el => messageRefs.current[0] = el}
-                  className="bg-gray-100 rounded-2xl p-4 ml-auto max-w-[80%] transform hover:scale-105 transition-transform duration-300 translate-x-full"
+                  className="bg-gray-100 rounded-2xl p-3 md:p-4 ml-auto max-w-[80%] transform hover:scale-105 transition-transform duration-300 translate-x-full"
                 >
-                  <p>Hola Clara! ¿Cómo puedes ayudarme? ❤️</p>
+                  <p className="text-xs md:text-base">Hola Clara! ¿Cómo puedes ayudarme? ❤️</p>
                 </div>
                 <div 
                   ref={el => messageRefs.current[1] = el}
-                  className="bg-gray-100 rounded-2xl p-4 max-w-[80%] transform hover:-translate-x-2 transition-transform duration-300 -translate-x-full"
+                  className="bg-gray-100 rounded-2xl p-3 md:p-4 max-w-[80%] transform hover:-translate-x-2 transition-transform duration-300 -translate-x-full"
                 >
-                  <p>Hagamos que tu CV destaque y busquemos ofertas que encajen contigo!</p>
+                  <p className="text-xs md:text-base">Hagamos que tu CV destaque y busquemos ofertas que encajen contigo!</p>
                 </div>
                 <div 
                   ref={el => messageRefs.current[2] = el}
-                  className="bg-gray-100 rounded-2xl p-4 ml-auto max-w-[80%] transform hover:translate-x-2 transition-transform duration-300 translate-x-full"
+                  className="bg-gray-100 rounded-2xl p-3 md:p-4 ml-auto max-w-[80%] transform hover:translate-x-2 transition-transform duration-300 translate-x-full"
                 >
-                  <p>¿Practicamos para tu próxima entrevista? 🗣️</p>
+                  <p className="text-xs md:text-base">¿Practicamos para tu próxima entrevista? 🗣️</p>
                 </div>
                 <div 
                   ref={el => messageRefs.current[3] = el}
-                  className="bg-gray-100 rounded-2xl p-4 max-w-[80%] transform hover:-translate-x-2 transition-transform duration-300 -translate-x-full"
+                  className="bg-gray-100 rounded-2xl p-3 md:p-4 max-w-[80%] transform hover:-translate-x-2 transition-transform duration-300 -translate-x-full"
                 >
-                  <p>Elijamos la mejor formación para ti 👨‍🎓</p>
+                  <p className="text-xs md:text-base">Elijamos la mejor formación para ti 👨‍🎓</p>
                 </div>
                 <div 
                   ref={el => messageRefs.current[4] = el}
-                  className="bg-gray-100 rounded-2xl p-4 ml-auto max-w-[80%] transform hover:translate-x-2 transition-transform duration-300 translate-x-full"
+                  className="bg-gray-100 rounded-2xl p-3 md:p-4 ml-auto max-w-[80%] transform hover:translate-x-2 transition-transform duration-300 translate-x-full"
                 >
-                  <p>Y cómo puedo empezar a buscar empleo? 🤔</p>
+                  <p className="text-xs md:text-base">Y cómo puedo empezar a buscar empleo? 🤔</p>
                 </div>
                 <div 
                   ref={el => messageRefs.current[5] = el}
-                  className="bg-gray-100 rounded-2xl p-4 max-w-[80%] transform hover:-translate-x-2 transition-transform duration-300 -translate-x-full"
+                  className="bg-gray-100 rounded-2xl p-3 md:p-4 max-w-[80%] transform hover:-translate-x-2 transition-transform duration-300 -translate-x-full"
                 >
-                  <p>Podemos diseñar un plan de trabajo y conectar con personas de interés</p>
+                  <p className="text-xs md:text-base">Podemos diseñar un plan de trabajo y conectar con personas de interés</p>
                 </div>
                 <div 
                   ref={el => messageRefs.current[6] = el}
-                  className="bg-gray-100 rounded-2xl p-4 ml-auto max-w-[80%] transform hover:translate-x-2 transition-transform duration-300 translate-x-full"
+                  className="bg-gray-100 rounded-2xl p-3 md:p-4 ml-auto max-w-[80%] transform hover:translate-x-2 transition-transform duration-300 translate-x-full"
                 >
-                  <p>¡Vamos a ello! 💪</p>
+                  <p className="text-xs md:text-base">¡Vamos a ello! 💪</p>
                 </div>
               </div>
             </div>
-            <div className="flex-1">
-              <h2 className="text-5xl font-bold text-navy-900 mb-8">
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl md:text-5xl font-bold text-navy-900 mb-6 md:mb-8">
                 Futuro<br />
                 profesional,<br />
                 te acompaño
               </h2>
-              <button className="bg-amber-400 rounded-full px-8 py-4 font-semibold text-black hover:bg-amber-300 transition-colors">
+              <button className="bg-amber-400 rounded-full px-6 py-3 md:px-8 md:py-4 font-semibold text-black hover:bg-amber-300 transition-colors">
                 COMIENZA AHORA
               </button>
             </div>
@@ -225,59 +224,59 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-navy-900 py-20">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-5xl font-bold text-white mb-16">Guía rápida</h2>
+      <section className="bg-navy-900 py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 md:mb-16">Guía rápida</h2>
           
           <div className="relative">
             <button 
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-amber-400 rounded-full p-2 hover:bg-amber-300 transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-amber-400 rounded-full p-2 hover:bg-amber-300 transition-colors z-10"
             >
-              <ArrowLeft className="w-6 h-6" />
+              <ArrowLeft className="w-4 h-4 md:w-6 md:h-6" />
             </button>
             
-            <div className="flex gap-8 overflow-hidden">
-              {faqCards.slice(currentSlide, currentSlide + 3).map((card, index) => (
-                <div key={index} className="flex-1 bg-amber-400 rounded-3xl p-8">
-                  <div className="flex justify-between items-start mb-6">
-                    <h3 className="text-2xl font-bold text-navy-900">{card.question}</h3>
-                    <div className="bg-white rounded-full p-2">
-                      <ArrowIcon className="w-4 h-4" />
+            <div className="flex flex-col md:flex-row gap-4 md:gap-8 overflow-hidden">
+              {faqCards.slice(currentSlide, currentSlide + (window.innerWidth >= 768 ? 3 : 1)).map((card, index) => (
+                <div key={index} className="flex-1 bg-amber-400 rounded-3xl p-6 md:p-8">
+                  <div className="flex justify-between items-start mb-4 md:mb-6">
+                    <h3 className="text-xl md:text-2xl font-bold text-navy-900">{card.question}</h3>
+                    <div className="bg-white rounded-full p-1 md:p-2">
+                      <ArrowIcon className="w-3 h-3 md:w-4 md:h-4" />
                     </div>
                   </div>
-                  <p className="text-navy-900">{card.answer}</p>
+                  <p className="text-sm md:text-base text-navy-900">{card.answer}</p>
                 </div>
               ))}
             </div>
 
             <button 
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-amber-400 rounded-full p-2 hover:bg-amber-300 transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-amber-400 rounded-full p-2 hover:bg-amber-300 transition-colors z-10"
             >
-              <ArrowRight className="w-6 h-6" />
+              <ArrowRight className="w-4 h-4 md:w-6 md:h-6" />
             </button>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-amber-200 py-20">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-5xl font-bold text-navy-900 mb-16">Compañeros como tú...</h2>
+      <section className="bg-amber-200 py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <h2 className="text-3xl md:text-5xl font-bold text-navy-900 mb-8 md:mb-16">Compañeros como tú...</h2>
           
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white rounded-3xl overflow-hidden">
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.title}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-48 md:h-64 object-cover"
                 />
-                <div className="p-8">
-                  <h3 className="text-xl font-bold text-navy-900 mb-4">{testimonial.title}</h3>
-                  <p className="text-navy-800 mb-6">{testimonial.description}</p>
-                  <button className="bg-navy-900 text-white px-6 py-2 rounded-full hover:bg-navy-800 transition-colors">
+                <div className="p-6 md:p-8">
+                  <h3 className="text-lg md:text-xl font-bold text-navy-900 mb-3 md:mb-4">{testimonial.title}</h3>
+                  <p className="text-sm md:text-base text-navy-800 mb-4 md:mb-6">{testimonial.description}</p>
+                  <button className="bg-navy-900 text-white px-4 py-2 md:px-6 md:py-2 rounded-full text-sm md:text-base hover:bg-navy-800 transition-colors">
                     LEER MÁS
                   </button>
                 </div>
@@ -288,11 +287,10 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black text-white py-8">
-        <div className="max-w-7xl mx-auto px-8">
+      <footer className="bg-black text-white py-6 md:py-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex justify-center items-center gap-2">
-            
-            <span className="text-sm">Designed by  ❤️ TalentTools</span>
+            <span className="text-xs md:text-sm">Designed by  ❤️ TalentTools</span>
           </div>
         </div>
       </footer>
@@ -300,13 +298,13 @@ function App() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 rounded-full p-4 transition-all duration-300 ${
+        className={`fixed bottom-4 right-4 md:bottom-8 md:right-8 rounded-full p-3 md:p-4 transition-all duration-300 ${
           showScrollButton 
             ? 'opacity-100 translate-y-0 bg-amber-400 hover:bg-amber-300' 
             : 'opacity-0 translate-y-16 bg-white hover:bg-gray-50'
         }`}
       >
-        <ArrowUp className="w-6 h-6" />
+        <ArrowUp className="w-4 h-4 md:w-6 md:h-6" />
       </button>
 
       {/* CSS for animation */}
