@@ -99,7 +99,7 @@ function App() {
 
   return (
     
-    <div className="min-h-screen bg-gradient-to-br from-[#f1b435] to-[#fee4a9]">
+    <div className="min-h-screen bg-gradient-to-br from-[#fee4a9] to-[#f1b435]">
       {/* Header with Logo and Talk Button */}
       <header className="flex justify-between items-center p-4 md:p-8">
         <img 
