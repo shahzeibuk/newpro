@@ -116,42 +116,43 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-0">
-        <div className="max-w-2xl text-center md:text-left mb-8 md:mb-0">
-          <h1 className="text-8xl md:text-8xl font-bold text-navy-900 mb-4">
-            Soy <span className="bg-white px-4 py-1 rounded-full">Clara,</span>
-            <br />
-            <span className="text-5xl md:text-5xl">Orientadora</span>
+      <section className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-4 md:px-8 ">
+        <div className="max-w-2xl text-center md:text-left">
+          <h1 className="text-[72px] md:text-[82px] font-bold text-[#202A45] mb-4 font-custom leading-none">
+            <span className="inline-flex items-center gap-3">
+              Soy <span className="bg-white px-4 py-1 rounded-full">Clara,</span>
+            </span>
+            <span className="text-[64px] md:text-[72px] block mt-2">tu orientadora</span>
           </h1>
           
-          <p className="text-4xl md:text-2xl mb-8 text-navy-800">
+          <p className="text-2xl md:text-3xl mb-8 text-[#202A45] font-custom">
             de la Unidad de Empleabilidad<br />
             y Prácticas de la <span className='text font-bold'>UPSA</span>  
           </p>
 
           <div className="space-y-4">
-            <button className="bg-white text-[#f1b435] rounded-full px-6 py-3 md:px-8 md:py-4 font-semibold text-black hover:opacity-90 transition-opacity">
+            <button className="bg-white text-[#202A45] rounded-full px-6 py-3 md:px-8 md:py-4 text-xl md:text-2xl font-semibold hover:opacity-90 transition-opacity font-custom">
               AVANCEMOS JUNTOS
             </button>
-            <p className="text-lg md:text-xl text-navy-800 ml-2">
-              Camina al éxito profesional
+            <p className="text-lg md:text-xl text-white ml-2 font-custom">
+            En tu camino al éxito profesional 
             </p>
           </div>
         </div>
   
-        <div className="relative w-full md:w-auto">
-          <div className="absolute top-3 left-0 w-full h-full -z-8">
+        <div className="relative w-full md:w-auto overflow-hidden">
+          <div className="absolute inset-0 -z-8">
             <img 
               src="/blob-haikei.png" 
               alt="Background" 
               className="w-full h-full object-cover rounded-3xl opacity-90"
             />
           </div>
-          <div className="absolute -top-10 -right-10 md:-top-20 md:-right-20 w-48 h-48 md:w-96 md:h-96 bg-white rounded-bl-[50px] md:rounded-bl-[100px] -z-10" />
+          <div className="absolute inset-0 md:w-[600px] md:h-[600px] bg-white rounded-bl-[50px] -z-10" />
           <img 
             src="/clara-profile.png"
             alt="Professional Woman"
-            className="relative z-10 w-full max-w-[350px] md:max-w-[660px] mx-auto transform scale-x-[-1]"
+            className="relative z-10 w-full  max-w-[400px] md:max-w-[700px] transform scale-x-[-1]"
           />
         </div>
       </section>
@@ -212,7 +213,7 @@ function App() {
               </div>
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-bold text-navy-900 mb-6 md:mb-8">
+              <h2 className="text-6xl md:text-8xl font-bold text-[#202A45] mb-6 md:mb-8">
                 Futuro<br />
                 profesional,<br />
                 te acompaño
@@ -226,7 +227,7 @@ function App() {
       {/* FAQ Section */}
       <section className="bg-[#202a45] py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 md:mb-16">Guía rápida</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#F1B435] mb-8 md:mb-16">Guía rápida</h2>
           
           <div className="relative">
             <button 
@@ -240,7 +241,7 @@ function App() {
               {faqCards.slice(currentSlide, currentSlide + (window.innerWidth >= 768 ? 3 : 1)).map((card, index) => (
                 <div key={index} className="flex-1 bg-amber-400 rounded-3xl p-6 md:p-8">
                   <div className="flex justify-between items-start mb-4 md:mb-6">
-                    <h3 className="text-xl md:text-2xl font-bold text-navy-900">{card.question}</h3>
+                    <h3 className="text-2xl font-bold text-white font-custom">{card.question}</h3>
                     <div className="bg-white rounded-full p-1 md:p-2">
                       <ArrowIcon className="w-3 h-3 md:w-4 md:h-4" />
                     </div>
@@ -263,7 +264,7 @@ function App() {
       {/* Testimonials Section */}
       <section className="bg-[#fee4a9] py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h2 className="text-3xl md:text-5xl font-bold text-navy-900 mb-8 md:mb-16">Compañeros como tú...</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#202A45] mb-8 md:mb-16">Compañeros como tú...</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
