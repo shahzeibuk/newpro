@@ -99,7 +99,7 @@ function App() {
 
   return (
     
-    <div className="min-h-screen bg-gradient-to-br from-amber-200 to-amber-400">
+    <div className="min-h-screen bg-gradient-to-br from-[#f1b435] to-[#fee4a9]">
       {/* Header with Logo and Talk Button */}
       <header className="flex justify-between items-center p-4 md:p-8">
         <img 
@@ -107,28 +107,30 @@ function App() {
           alt="Universidad Logo"
           className="h-10 md:h-16"
         />
-        <button className="bg-white rounded-full px-4 py-2 md:px-6 md:py-3 flex items-center gap-1 md:gap-2 font-semibold text-black text-sm md:text-base hover:bg-gray-50 transition-colors">
-          ¿HABLAMOS?
-          <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-        </button>
+        <div className="bg-white rounded-full flex items-center px-6 py-2">
+          <span className="text-[#f1b435] font-bold mr-2">¿HABLAMOS?</span>
+          <button className="bg-[#f1b435] rounded-full p-2 hover:opacity-90 transition-opacity">
+            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-white" />
+          </button>
+        </div>
       </header>
 
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-0">
         <div className="max-w-2xl text-center md:text-left mb-8 md:mb-0">
-          <h1 className="text-4xl md:text-6xl font-bold text-navy-900 mb-4">
-            Soy <span className="bg-white px-4 py-1 rounded-full">Clara</span>,
+          <h1 className="text-8xl md:text-8xl font-bold text-navy-900 mb-4">
+            Soy <span className="bg-white px-4 py-1 rounded-full">Clara,</span>
             <br />
-            <span className="text-3xl md:text-5xl">Orientadora</span>
+            <span className="text-5xl md:text-5xl">Orientadora</span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-navy-800">
+          <p className="text-4xl md:text-2xl mb-8 text-navy-800">
             de la Unidad de Empleabilidad<br />
-            y Prácticas de la UPSA
+            y Prácticas de la <span className='text font-bold'>UPSA</span>  
           </p>
 
           <div className="space-y-4">
-            <button className="bg-white rounded-full px-6 py-3 md:px-8 md:py-4 font-semibold text-black hover:bg-gray-50 transition-colors">
+            <button className="bg-white text-[#f1b435] rounded-full px-6 py-3 md:px-8 md:py-4 font-semibold text-black hover:opacity-90 transition-opacity">
               AVANCEMOS JUNTOS
             </button>
             <p className="text-lg md:text-xl text-navy-800 ml-2">
@@ -149,7 +151,7 @@ function App() {
           <img 
             src="/clara-profile.png"
             alt="Professional Woman"
-            className="relative z-10 w-full max-w-[350px] md:max-w-[660px] mx-auto"
+            className="relative z-10 w-full max-w-[350px] md:max-w-[660px] mx-auto transform scale-x-[-1]"
           />
         </div>
       </section>
@@ -215,16 +217,14 @@ function App() {
                 profesional,<br />
                 te acompaño
               </h2>
-              <button className="bg-amber-400 rounded-full px-6 py-3 md:px-8 md:py-4 font-semibold text-black hover:bg-amber-300 transition-colors">
-                COMIENZA AHORA
-              </button>
+            
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-navy-900 py-12 md:py-20">
+      <section className="bg-[#202a45] py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 md:mb-16">Guía rápida</h2>
           
@@ -261,7 +261,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-amber-200 py-12 md:py-20">
+      <section className="bg-[#fee4a9] py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <h2 className="text-3xl md:text-5xl font-bold text-navy-900 mb-8 md:mb-16">Compañeros como tú...</h2>
           
@@ -313,6 +313,25 @@ function App() {
           opacity: 1 !important;
           transform: translateX(0) !important;
           transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .bg-gray-100 {
+          position: relative;
+        }
+        
+        .bg-gray-100::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 20px;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 8px solid #f3f4f6;
+        }
+        
+        .ml-auto::after {
+          left: auto;
+          right: 20px;
         }
       `}</style>
     </div>
