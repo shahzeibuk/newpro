@@ -96,16 +96,17 @@ function App() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + (faqCards.length - 2)) % (faqCards.length - 2));
   };
+  
 
   return (
     
     <div className="min-h-screen bg-gradient-to-br from-[#fee4a9] to-[#f1b435]">
       {/* Header with Logo and Talk Button */}
-      <header className="flex justify-between items-center p-4 md:p-8">
+      <header className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto p-4 md:p-8">
         <img 
           src="/upsa-logo-white.png"
           alt="Universidad Logo"
-          className="h-10 md:h-16"
+          className="h-10 md:h-16 header-logo"
         />
         <div className="bg-white rounded-full flex items-center px-6 py-2">
           <span className="text-[#f1b435] font-bold mr-2">¿HABLAMOS?</span>
@@ -118,7 +119,7 @@ function App() {
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-4 md:px-8 ">
         <div className="max-w-2xl text-center md:text-left">
-          <h1 className="text-[72px] md:text-[82px] font-bold text-[#202A45] mb-4 font-custom leading-none">
+          <h1 className="text-[72px] md:text-[82px] text-[#202A45] mb-4 font-custom leading-none">
             <span className="inline-flex items-center gap-3">
               Soy <span className="bg-white px-4 py-1 rounded-full">Clara,</span>
             </span>
@@ -134,7 +135,7 @@ function App() {
             <button className="bg-white text-[#202A45] rounded-full px-6 py-3 md:px-8 md:py-4 text-xl md:text-2xl font-semibold hover:opacity-90 transition-opacity font-custom">
               AVANCEMOS JUNTOS
             </button>
-            <p className="text-lg md:text-xl text-white ml-2 font-custom">
+            <p className="text-lg md:text-xl text-white ml-2 font-custom sub-heading">
             En tu camino al éxito profesional 
             </p>
           </div>
@@ -143,12 +144,12 @@ function App() {
         <div className="relative w-full md:w-auto overflow-hidden">
           <div className="absolute inset-0 -z-8">
             <img 
-              src="/blob-haikei.png" 
+              src="/bg-image.png" 
               alt="Background" 
-              className="w-full h-full object-cover rounded-3xl opacity-90"
+              className="w-full h-full object-contain rounded-3xl opacity-90 bg-image"
             />
           </div>
-          <div className="absolute inset-0 md:w-[600px] md:h-[600px] bg-white rounded-bl-[50px] -z-10" />
+          <div className="absolute inset-0 md:w-[800px] md:h-[800px] bg-white rounded-bl-[50px] -z-10" />
           <img 
             src="/clara-profile.png"
             alt="Professional Woman"
@@ -161,13 +162,13 @@ function App() {
       <section className="bg-white py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20">
-            <div className="relative w-full max-w-[350px] md:w-[400px]">
+            <div className="relative w-full max-w-[800px] md:w-[800px]">
               <img 
                 src="/mobile-mockup.png"
                 alt="Mobile App"
-                className="w-full"
+                className="w-full mobile-mockup"
               />
-              <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-3 px-6 md:px-8">
+              <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-6 px-6 md:px-8 mobile-content">
                 <div 
                   ref={el => messageRefs.current[0] = el}
                   className="bg-gray-100 rounded-2xl p-3 md:p-4 ml-auto max-w-[80%] transform hover:scale-105 transition-transform duration-300 translate-x-full"
@@ -213,7 +214,7 @@ function App() {
               </div>
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h2 className="text-6xl md:text-8xl font-bold text-[#202A45] mb-6 md:mb-8">
+              <h2 className="text-6xl md:text-8xl text-[#202A45] mb-6 md:mb-8">
                 Futuro<br />
                 profesional,<br />
                 te acompaño
@@ -227,7 +228,7 @@ function App() {
       {/* FAQ Section */}
       <section className="bg-[#202a45] py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#F1B435] mb-8 md:mb-16">Guía rápida</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#F1B435] mb-8 md:mb-16 text-white">Guía rápida</h2>
           
           <div className="relative">
             <button 
@@ -241,7 +242,7 @@ function App() {
               {faqCards.slice(currentSlide, currentSlide + (window.innerWidth >= 768 ? 3 : 1)).map((card, index) => (
                 <div key={index} className="flex-1 bg-amber-400 rounded-3xl p-6 md:p-8">
                   <div className="flex justify-between items-start mb-4 md:mb-6">
-                    <h3 className="text-2xl font-bold text-white font-custom">{card.question}</h3>
+                    <h3 className="text-2xl font-bold text-white font-custom text-blue">{card.question}</h3>
                     <div className="bg-white rounded-full p-1 md:p-2">
                       <ArrowIcon className="w-3 h-3 md:w-4 md:h-4" />
                     </div>
@@ -275,7 +276,7 @@ function App() {
                   className="w-full h-48 md:h-64 object-cover"
                 />
                 <div className="p-6 md:p-8">
-                  <h3 className="text-lg md:text-xl font-bold text-navy-900 mb-3 md:mb-4">{testimonial.title}</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-navy-900 mb-3 md:mb-4 test-title">{testimonial.title}</h3>
                   <p className="text-sm md:text-base text-navy-800 mb-4 md:mb-6">{testimonial.description}</p>
                   <button className="bg-navy-900 text-white px-4 py-2 md:px-6 md:py-2 rounded-full text-sm md:text-base hover:bg-navy-800 transition-colors">
                     LEER MÁS
