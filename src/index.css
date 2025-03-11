@@ -31,12 +31,19 @@
     img.w-full.mobile-mockup {
         width: 70%;
         margin: auto;
+        padding-left: 50px;
     }
     .mobile-content {
         width: 80%;
         margin: auto;
-        margin-left: 30px;
         font-weight: bold;
+    }
+    .mobile-text {
+        width: 481px;
+    font-size: 5.1rem;
+    }
+    .mobile-text h2 {
+        font-size: 6vw;
     }
     .text-white {
         color: white !important;
@@ -54,6 +61,9 @@
     .header-logo {
         width: 238px;
         height: 96px !important;
+    }
+    .test-description {
+        height: 76px;
     }
     /* Media Queries for Mobile Phones (Portrait) */
 @media screen and (max-width: 480px) {
@@ -75,6 +85,7 @@
     img.w-full.mobile-mockup {
         width: 90%;
         margin-right: 0px;
+
     }
   }
   
@@ -97,6 +108,7 @@
         width: 50%;
     }
     
+    
     .mobile-content {
         width: 60% !important;
         margin-left: 120px;
@@ -112,6 +124,9 @@
     .md\:text-8xl {
         font-size: 4rem !important;
         line-height: 1;
+    }
+    .mobile-section {
+        flex-direction: column !important;
     }
   }
   
