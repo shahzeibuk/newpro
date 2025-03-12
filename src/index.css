@@ -69,7 +69,7 @@
         height: 76px;
     }
     .mobile-section .md\:text-base {
-        font-size: 1.2vw;
+        font-size: 1vw;
         line-height: 1.8vw;
     }
     /* Media Queries for Mobile Phones (Portrait) */
