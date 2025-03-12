@@ -161,8 +161,8 @@ function App() {
       {/* News Section */}
       <section className="bg-white py-12 md:py-20 ">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20 mobile-section">
-            <div className="relative w-full max-w-[800px] md:w-[800px]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-10 mobile-section">
+            <div className="relative w-full max-w-[800px] md:w-[600px]">
               <img 
                 src="/mobile-mockup.png"
                 alt="Mobile App"
@@ -213,7 +213,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 text-center md:text-left mobile-text">
+            <div className=" relative w-full max-w-[800px] md:w-[600px] text-center md:text-left mobile-text">
               <h2 className="text-6xl md:text-8xl text-[#202A45] mb-6 md:mb-8">
                 Futuro<br />
                 profesional,

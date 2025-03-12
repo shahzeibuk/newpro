@@ -10,6 +10,9 @@
 }
 
 @layer base {
+    html {
+        overflow-x: hidden;
+    }
     body {
         @apply antialiased;
     }
@@ -65,6 +68,10 @@
     .test-description {
         height: 76px;
     }
+    .mobile-section .md\:text-base {
+        font-size: 1.2vw;
+        line-height: 1.8vw;
+    }
     /* Media Queries for Mobile Phones (Portrait) */
 @media screen and (max-width: 480px) {
     header {
@@ -86,6 +93,10 @@
         width: 90%;
         margin-right: 0px;
 
+    }
+    .mobile-section .md\:text-base {
+        font-size: 2.2vw;
+        line-height: 3.2vw;
     }
   }
   
@@ -112,21 +123,48 @@
     .mobile-content {
         width: 60% !important;
         margin-left: 120px;
+        gap: 1rem;
+    }
+    .mobile-section .md\:text-base {
+        font-size: 1.5vw;
+        line-height: 1.9vw;
     }
   }
   
   /* Media Queries for Tablets */
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     img.w-full.mobile-mockup {
-        width: 90%;
+        width: 50vw;
         margin-left: 80px;
+    }
+    .mobile-section .md\:w-\[800px\] {
+        width: 40vw;
     }
     .md\:text-8xl {
         font-size: 4rem !important;
         line-height: 1;
     }
     .mobile-section {
-        flex-direction: column !important;
+        gap: 0 !important;
+    }
+    .mobile-content {
+        gap: 1.5vw;
+    }
+    .mobile-section .bg-gray-100 {
+        padding: .6rem;
+    }
+    .mobile-section .md\:text-base {
+        font-size: 1.5vw;
+        line-height: 1.9vw;
+    }
+    img.w-full.mobile-mockup {
+        margin: 0;
+    }
+    .md\:text-\[72px\] {
+        font-size: 40px;
+    }
+    .md\:text-\[82px\] {
+        font-size: 40px;
     }
   }
   
